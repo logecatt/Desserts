@@ -14,6 +14,10 @@
 		02C2C7DC2C1B7FE900847016 /* DessertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7DB2C1B7FE900847016 /* DessertsTests.swift */; };
 		02C2C7E62C1B7FEA00847016 /* DessertsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7E52C1B7FEA00847016 /* DessertsUITests.swift */; };
 		02C2C7E82C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7E72C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift */; };
+		02C2C7F62C1B806200847016 /* MenuClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7F52C1B806200847016 /* MenuClient.swift */; };
+		02C2C7F92C1B826600847016 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7F82C1B826600847016 /* Meal.swift */; };
+		02C2C7FB2C1B87CD00847016 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7FA2C1B87CD00847016 /* MealDetailView.swift */; };
+		02C2C7FD2C1B8C5E00847016 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7FC2C1B8C5E00847016 /* MealDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		02C2C7E12C1B7FE900847016 /* DessertsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C2C7E52C1B7FEA00847016 /* DessertsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsUITests.swift; sourceTree = "<group>"; };
 		02C2C7E72C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02C2C7F52C1B806200847016 /* MenuClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuClient.swift; sourceTree = "<group>"; };
+		02C2C7F82C1B826600847016 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		02C2C7FA2C1B87CD00847016 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		02C2C7FC2C1B8C5E00847016 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +102,13 @@
 		02C2C7C92C1B7FE600847016 /* Desserts */ = {
 			isa = PBXGroup;
 			children = (
+				02C2C7F72C1B825000847016 /* Model */,
+				02C2C7F42C1B804900847016 /* Networking */,
 				02C2C7CA2C1B7FE600847016 /* DessertsApp.swift */,
 				02C2C7CC2C1B7FE600847016 /* ContentView.swift */,
 				02C2C7CE2C1B7FE900847016 /* Assets.xcassets */,
 				02C2C7D02C1B7FE900847016 /* Preview Content */,
+				02C2C7FA2C1B87CD00847016 /* MealDetailView.swift */,
 			);
 			path = Desserts;
 			sourceTree = "<group>";
@@ -125,6 +136,23 @@
 				02C2C7E72C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift */,
 			);
 			path = DessertsUITests;
+			sourceTree = "<group>";
+		};
+		02C2C7F42C1B804900847016 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				02C2C7F52C1B806200847016 /* MenuClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		02C2C7F72C1B825000847016 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02C2C7F82C1B826600847016 /* Meal.swift */,
+				02C2C7FC2C1B8C5E00847016 /* MealDetail.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C2C7F92C1B826600847016 /* Meal.swift in Sources */,
 				02C2C7CD2C1B7FE600847016 /* ContentView.swift in Sources */,
 				02C2C7CB2C1B7FE600847016 /* DessertsApp.swift in Sources */,
+				02C2C7FD2C1B8C5E00847016 /* MealDetail.swift in Sources */,
+				02C2C7FB2C1B87CD00847016 /* MealDetailView.swift in Sources */,
+				02C2C7F62C1B806200847016 /* MenuClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var meals: [Meal]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List($meals) { $meal in
+                NavigationLink(destination: MealDetailView(meal: $meal)) {
+                    HStack {
+                        Text(meal.name)
+                    }
+                }
+                .padding()
+            }
         }
-        .padding()
+        .onAppear {
+            Task {
+                do {
+                    meals = try await MenuClient().getMealsForCategory() ?? []
+                } catch {
+                    meals = []
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(meals: .constant(Meal.sampleData))
 }

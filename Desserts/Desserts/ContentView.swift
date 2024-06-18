@@ -14,10 +14,16 @@ struct ContentView: View {
             List($meals) { $meal in
                 NavigationLink(destination: MealDetailView(meal: $meal)) {
                     HStack {
+                        AsyncImage(url: URL(string: meal.thumbnailURL ?? ""), content: { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }, placeholder: {
+                            Image(systemName: "birthday.cake")
+                        })
+                        .frame(width: 70, height: 70)
                         Text(meal.name)
                     }
                 }
-                .padding()
             }
         }
         .onAppear {

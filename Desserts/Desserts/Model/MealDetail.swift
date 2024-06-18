@@ -28,19 +28,19 @@ extension MealDetail: Decodable {
         ingredients = []
             
         do {
-            var rawIngredients: Array<(String, String)> = []
-            var rawMeasures: Array<(String, String)> = []
+            var rawIngredients: Array<(Int, String)> = []
+            var rawMeasures: Array<(Int, String)> = []
             let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
             for key in container.allKeys {
                 if key.stringValue.hasPrefix("strIngredient") {
                     let newIngredient = try container.decodeIfPresent(String.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
-                    if let newIngredient = newIngredient, !newIngredient.isEmpty {
-                        rawIngredients.append((key.stringValue, newIngredient))
+                    if let newIngredient = newIngredient, !newIngredient.isEmpty && newIngredient != " "{
+                        rawIngredients.append((Int(key.stringValue.components(separatedBy: .decimalDigits.inverted).joined()) ?? 1, newIngredient))
                     }
                 } else if key.stringValue.hasPrefix("strMeasure") {
                     let newMeasure = try container.decodeIfPresent(String.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
-                    if let newMeasure = newMeasure, !newMeasure.isEmpty {
-                        rawMeasures.append((key.stringValue, newMeasure))
+                    if let newMeasure = newMeasure, !newMeasure.isEmpty && newMeasure != " " {
+                        rawMeasures.append((Int(key.stringValue.components(separatedBy: .decimalDigits.inverted).joined()) ?? 1, newMeasure))
                     }
                 }
             }
@@ -50,7 +50,7 @@ extension MealDetail: Decodable {
             
             var ingredients: Array<Ingredient> = []
             for index in 0..<min(rawIngredients.count, rawMeasures.count) {
-                ingredients.append(Ingredient(name: rawIngredients[index].1, measurement: rawMeasures[index].1))
+                ingredients.append(Ingredient(id: index, name: rawIngredients[index].1, measurement: rawMeasures[index].1))
             }
             
             self.ingredients = ingredients
@@ -78,7 +78,17 @@ extension MealDetail: Decodable {
     }
 }
 
-struct Ingredient {
+extension MealDetail {
+    static let sampleData = MealDetail(id: "1", category: "Dessert", instructions: "Bake the pie", ingredients: [
+        Ingredient(id: 0, name: "crust", measurement: "1"),
+        Ingredient(id: 1, name: "apples, chopped", measurement: "1 lb"),
+        Ingredient(id: 2, name: "cinnamon", measurement: "1 1/2 tsp")
+    ]
+    )
+}
+
+struct Ingredient: Identifiable {
+    let id: Int
     let name: String
     let measurement: String
 }

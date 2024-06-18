@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02C2C7CB2C1B7FE600847016 /* DessertsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7CA2C1B7FE600847016 /* DessertsApp.swift */; };
-		02C2C7CD2C1B7FE600847016 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7CC2C1B7FE600847016 /* ContentView.swift */; };
+		02C2C7CD2C1B7FE600847016 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7CC2C1B7FE600847016 /* MealsView.swift */; };
 		02C2C7CF2C1B7FE900847016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C2C7CE2C1B7FE900847016 /* Assets.xcassets */; };
 		02C2C7D22C1B7FE900847016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C2C7D12C1B7FE900847016 /* Preview Assets.xcassets */; };
 		02C2C7DC2C1B7FE900847016 /* DessertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7DB2C1B7FE900847016 /* DessertsTests.swift */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		02C2C7C72C1B7FE600847016 /* Desserts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desserts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C2C7CA2C1B7FE600847016 /* DessertsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsApp.swift; sourceTree = "<group>"; };
-		02C2C7CC2C1B7FE600847016 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02C2C7CC2C1B7FE600847016 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		02C2C7CE2C1B7FE900847016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C2C7D12C1B7FE900847016 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02C2C7D72C1B7FE900847016 /* DessertsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +105,7 @@
 				02C2C7F72C1B825000847016 /* Model */,
 				02C2C7F42C1B804900847016 /* Networking */,
 				02C2C7CA2C1B7FE600847016 /* DessertsApp.swift */,
-				02C2C7CC2C1B7FE600847016 /* ContentView.swift */,
+				02C2C7CC2C1B7FE600847016 /* MealsView.swift */,
 				02C2C7CE2C1B7FE900847016 /* Assets.xcassets */,
 				02C2C7D02C1B7FE900847016 /* Preview Content */,
 				02C2C7FA2C1B87CD00847016 /* MealDetailView.swift */,
@@ -286,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C2C7F92C1B826600847016 /* Meal.swift in Sources */,
-				02C2C7CD2C1B7FE600847016 /* ContentView.swift in Sources */,
+				02C2C7CD2C1B7FE600847016 /* MealsView.swift in Sources */,
 				02C2C7CB2C1B7FE600847016 /* DessertsApp.swift in Sources */,
 				02C2C7FD2C1B8C5E00847016 /* MealDetail.swift in Sources */,
 				02C2C7FB2C1B87CD00847016 /* MealDetailView.swift in Sources */,

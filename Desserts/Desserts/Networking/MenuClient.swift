@@ -14,7 +14,7 @@ struct MenuClient {
         }
         let (data, _) = try await URLSession.shared.data(from: url)
         let wrapper = try JSONDecoder().decode(MealResponseWrapper.self, from: data)
-        return wrapper.meals
+        return wrapper.meals?.sorted(by: { $0.name < $1.name })
     }
     
     func getMealDetails(id: String) async throws -> MealDetail? {

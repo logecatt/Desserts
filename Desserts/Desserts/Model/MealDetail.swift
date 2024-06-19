@@ -91,4 +91,10 @@ struct Ingredient: Identifiable {
     let id: Int
     let name: String
     let measurement: String
+    
+    init(id: Int = 0, name: String, measurement: String) {
+        self.id = id
+        self.name = name
+        self.measurement = measurement
+    }
 }

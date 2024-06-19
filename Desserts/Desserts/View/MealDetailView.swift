@@ -10,28 +10,42 @@ import SwiftUI
 struct MealDetailView: View {
     @Binding var meal: Meal
     @State private var isLoading: Bool = false
+    @State private var selectedSection: Section = .ingredients
+    @Environment(\.dismiss) var dismiss
+    
+    enum Section: String, CaseIterable, Identifiable {
+        case ingredients = "Ingredients"
+        case instructions = "Instructions"
+        
+        var id: Self { self }
+    }
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                mealHeaderView
-                
-                ScrollView {
-                    VStack(alignment: .leading) {
-                        Text(meal.name)
-                            .font(.title)
-                        
-                        mealIngredientsView
-                        
-                        mealInstructionsView
-                        
-                        Spacer()
-                        
-                    }
-                    .padding(.horizontal)
+        List {
+            MealHeaderView(meal: meal)
+                .listRowSeparator(.hidden)
+            
+            
+            Picker("", selection: $selectedSection) {
+                ForEach(Section.allCases) { section in
+                    Text(section.rawValue)
                 }
             }
+            .pickerStyle(.segmented)
+            .listRowSeparator(.hidden)
+            
+            switch selectedSection {
+            case .ingredients:
+                mealIngredientsView
+                    .listRowSeparator(.hidden)
+            case .instructions:
+                mealInstructionsView
+                    .listRowSeparator(.hidden)
+            }
         }
+        .listStyle(.plain)
+        .scrollIndicators(.never)
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             if meal.details == nil {
                 isLoading = true
@@ -49,29 +63,6 @@ struct MealDetailView: View {
     }
     
     @ViewBuilder
-    var mealHeaderView: some View {
-        if let imageURL = meal.thumbnailURL {
-            AsyncImage(url: URL(string: imageURL), content: { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .mask(LinearGradient(
-                        gradient: Gradient(stops: [
-                            .init(color: .black, location: 0),
-                            .init(color: .clear, location: 1)
-                        ]),
-                        startPoint: .top, endPoint: .bottom
-                    ))
-            }, placeholder: {
-                EmptyView()
-            }
-            )
-            .frame(maxHeight: 200)
-            .ignoresSafeArea(edges: .top)
-            .frame(maxHeight: 200)
-        }
-    }
-    
-    @ViewBuilder
     var mealIngredientsView: some View {
         VStack(alignment: .leading) {
             Text("Ingredients")
@@ -81,8 +72,7 @@ struct MealDetailView: View {
                 ProgressView()
             } else {
                 ForEach(meal.details?.ingredients ?? []) { ingredient in
-                    Text("• \(ingredient.measurement) \(ingredient.name)"
-                    )
+                    IngredientItemView(ingredient: ingredient)
                 }
             }
         }
@@ -97,7 +87,7 @@ struct MealDetailView: View {
             if isLoading {
                 ProgressView()
             } else {
-                Text(meal.details?.instructions ?? "")
+                    Text(meal.details?.instructions ?? "")
             }
         }
     }

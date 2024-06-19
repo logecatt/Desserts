@@ -13,24 +13,21 @@ struct MealsView: View {
     
     var body: some View {
         NavigationStack {
-            List($filteredMeals) { $meal in
-                NavigationLink(destination: MealDetailView(meal: $meal)) {
-                    HStack {
-                        AsyncImage(url: URL(string: meal.thumbnailURL ?? ""), content: { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }, placeholder: {
-                            Image(systemName: "birthday.cake")
-                                .resizable()
-                                .background(Color.pink)
-                        })
-                        .frame(width: 70, height: 70)
-                        Text(meal.name)
+            ScrollView {
+                LazyVGrid(
+                    columns: [GridItem(.adaptive(minimum: 170))],
+                    alignment: .center,
+                    spacing: 16
+                ) {
+                    ForEach($filteredMeals) { $meal in
+                        NavigationLink(destination: MealDetailView(meal: $meal)) {
+                            MealCard(meal: meal)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
-                .listRowSeparator(.hidden)
-                .listStyle(.plain)
             }
+            .scrollIndicators(.never)
             .navigationTitle("Dessert")
         }
         .searchable(text: $searchText, prompt: "Search for a meal by name")

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An enumeration of different network errors.
 enum NetworkError: Error {
     case invalidPath
     case parsingError

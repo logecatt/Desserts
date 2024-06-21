@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A generic view that displays custom section content with a given section title.
 struct SectionView<Content>: View
 where Content: View
 {

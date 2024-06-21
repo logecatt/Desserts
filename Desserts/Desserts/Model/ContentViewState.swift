@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An enumeration that describes a view's current state.
 enum ContentViewState {
     case loading
     case success

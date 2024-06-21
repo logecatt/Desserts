@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays the details for a specific meal.
 struct MealDetailView: View {
     @Binding var meal: Meal
     @State private var isLoading: Bool = false

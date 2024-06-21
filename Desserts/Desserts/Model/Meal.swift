@@ -15,7 +15,7 @@ struct MealResponseWrapper: Codable {
 
 // MARK: Type Definition
 
-/// A type that describes a Meal
+/// A type that describes a Meal.
 ///
 /// - Parameters:
 ///     - id: The unique identifier of the Meal.
@@ -23,9 +23,13 @@ struct MealResponseWrapper: Codable {
 ///     - thumbnailURL: The String representation of the Meal's thumbnail image, otherwise `nil`.
 ///     - details: The details associated with the Meal.
 struct Meal: Identifiable {
+    /// The meal ID.
     let id: String
+    /// The meal name.
     let name: String
+    /// The meal thumbnail URL.
     let thumbnailURL: String?
+    /// The meal details.
     var details: MealDetail?
 }
 

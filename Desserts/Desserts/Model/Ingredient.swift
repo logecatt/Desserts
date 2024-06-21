@@ -15,10 +15,18 @@ import Foundation
 ///     - name: The ingredient name.
 ///     - measurment: The measurement of the ingredient.
 struct Ingredient: Identifiable {
+    /// The ingredient ID.
     let id: Int
+    /// The ingredient name.
     let name: String
+    /// The ingredient measurement.
     let measurement: String
     
+    /// <#Description#>
+    /// - Parameters:
+    ///   - id: <#id description#>
+    ///   - name: <#name description#>
+    ///   - measurement: <#measurement description#>
     init(id: Int = 0, name: String, measurement: String) {
         self.id = id
         self.name = name

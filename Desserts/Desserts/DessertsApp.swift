@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// An app that fetches and displays desserts and their details.
 @main
 struct DessertsApp: App {
     @State private var meals: [Meal] = []

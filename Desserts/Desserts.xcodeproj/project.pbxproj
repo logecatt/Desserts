@@ -11,9 +11,6 @@
 		02C2C7CD2C1B7FE600847016 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7CC2C1B7FE600847016 /* MealsView.swift */; };
 		02C2C7CF2C1B7FE900847016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C2C7CE2C1B7FE900847016 /* Assets.xcassets */; };
 		02C2C7D22C1B7FE900847016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C2C7D12C1B7FE900847016 /* Preview Assets.xcassets */; };
-		02C2C7DC2C1B7FE900847016 /* DessertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7DB2C1B7FE900847016 /* DessertsTests.swift */; };
-		02C2C7E62C1B7FEA00847016 /* DessertsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7E52C1B7FEA00847016 /* DessertsUITests.swift */; };
-		02C2C7E82C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7E72C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift */; };
 		02C2C7F62C1B806200847016 /* MealClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7F52C1B806200847016 /* MealClient.swift */; };
 		02C2C7F92C1B826600847016 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7F82C1B826600847016 /* Meal.swift */; };
 		02C2C7FB2C1B87CD00847016 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C7FA2C1B87CD00847016 /* MealDetailView.swift */; };
@@ -33,34 +30,12 @@
 		02C2C81B2C25FEA500847016 /* ContentViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2C81A2C25FEA500847016 /* ContentViewState.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		02C2C7D82C1B7FE900847016 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02C2C7BF2C1B7FE600847016 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02C2C7C62C1B7FE600847016;
-			remoteInfo = Desserts;
-		};
-		02C2C7E22C1B7FE900847016 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02C2C7BF2C1B7FE600847016 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02C2C7C62C1B7FE600847016;
-			remoteInfo = Desserts;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		02C2C7C72C1B7FE600847016 /* Desserts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desserts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C2C7CA2C1B7FE600847016 /* DessertsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsApp.swift; sourceTree = "<group>"; };
 		02C2C7CC2C1B7FE600847016 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		02C2C7CE2C1B7FE900847016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02C2C7D12C1B7FE900847016 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		02C2C7D72C1B7FE900847016 /* DessertsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C2C7DB2C1B7FE900847016 /* DessertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsTests.swift; sourceTree = "<group>"; };
-		02C2C7E12C1B7FE900847016 /* DessertsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DessertsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C2C7E52C1B7FEA00847016 /* DessertsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsUITests.swift; sourceTree = "<group>"; };
-		02C2C7E72C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02C2C7F52C1B806200847016 /* MealClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealClient.swift; sourceTree = "<group>"; };
 		02C2C7F82C1B826600847016 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		02C2C7FA2C1B87CD00847016 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
@@ -88,20 +63,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C2C7D42C1B7FE900847016 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02C2C7DE2C1B7FE900847016 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,8 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				02C2C7C92C1B7FE600847016 /* Desserts */,
-				02C2C7DA2C1B7FE900847016 /* DessertsTests */,
-				02C2C7E42C1B7FE900847016 /* DessertsUITests */,
 				02C2C7C82C1B7FE600847016 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				02C2C7C72C1B7FE600847016 /* Desserts.app */,
-				02C2C7D72C1B7FE900847016 /* DessertsTests.xctest */,
-				02C2C7E12C1B7FE900847016 /* DessertsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,23 +102,6 @@
 				02C2C7D12C1B7FE900847016 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		02C2C7DA2C1B7FE900847016 /* DessertsTests */ = {
-			isa = PBXGroup;
-			children = (
-				02C2C7DB2C1B7FE900847016 /* DessertsTests.swift */,
-			);
-			path = DessertsTests;
-			sourceTree = "<group>";
-		};
-		02C2C7E42C1B7FE900847016 /* DessertsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				02C2C7E52C1B7FEA00847016 /* DessertsUITests.swift */,
-				02C2C7E72C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift */,
-			);
-			path = DessertsUITests;
 			sourceTree = "<group>";
 		};
 		02C2C7F42C1B804900847016 /* Networking */ = {
@@ -230,42 +170,6 @@
 			productReference = 02C2C7C72C1B7FE600847016 /* Desserts.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02C2C7D62C1B7FE900847016 /* DessertsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02C2C7EE2C1B7FEA00847016 /* Build configuration list for PBXNativeTarget "DessertsTests" */;
-			buildPhases = (
-				02C2C7D32C1B7FE900847016 /* Sources */,
-				02C2C7D42C1B7FE900847016 /* Frameworks */,
-				02C2C7D52C1B7FE900847016 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02C2C7D92C1B7FE900847016 /* PBXTargetDependency */,
-			);
-			name = DessertsTests;
-			productName = DessertsTests;
-			productReference = 02C2C7D72C1B7FE900847016 /* DessertsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		02C2C7E02C1B7FE900847016 /* DessertsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02C2C7F12C1B7FEA00847016 /* Build configuration list for PBXNativeTarget "DessertsUITests" */;
-			buildPhases = (
-				02C2C7DD2C1B7FE900847016 /* Sources */,
-				02C2C7DE2C1B7FE900847016 /* Frameworks */,
-				02C2C7DF2C1B7FE900847016 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				02C2C7E32C1B7FE900847016 /* PBXTargetDependency */,
-			);
-			name = DessertsUITests;
-			productName = DessertsUITests;
-			productReference = 02C2C7E12C1B7FE900847016 /* DessertsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,14 +182,6 @@
 				TargetAttributes = {
 					02C2C7C62C1B7FE600847016 = {
 						CreatedOnToolsVersion = 15.2;
-					};
-					02C2C7D62C1B7FE900847016 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 02C2C7C62C1B7FE600847016;
-					};
-					02C2C7E02C1B7FE900847016 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 02C2C7C62C1B7FE600847016;
 					};
 				};
 			};
@@ -303,8 +199,6 @@
 			projectRoot = "";
 			targets = (
 				02C2C7C62C1B7FE600847016 /* Desserts */,
-				02C2C7D62C1B7FE900847016 /* DessertsTests */,
-				02C2C7E02C1B7FE900847016 /* DessertsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,20 +210,6 @@
 			files = (
 				02C2C7D22C1B7FE900847016 /* Preview Assets.xcassets in Resources */,
 				02C2C7CF2C1B7FE900847016 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02C2C7D52C1B7FE900847016 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02C2C7DF2C1B7FE900847016 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,37 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		02C2C7D32C1B7FE900847016 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02C2C7DC2C1B7FE900847016 /* DessertsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02C2C7DD2C1B7FE900847016 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02C2C7E82C1B7FEA00847016 /* DessertsUITestsLaunchTests.swift in Sources */,
-				02C2C7E62C1B7FEA00847016 /* DessertsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		02C2C7D92C1B7FE900847016 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02C2C7C62C1B7FE600847016 /* Desserts */;
-			targetProxy = 02C2C7D82C1B7FE900847016 /* PBXContainerItemProxy */;
-		};
-		02C2C7E32C1B7FE900847016 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02C2C7C62C1B7FE600847016 /* Desserts */;
-			targetProxy = 02C2C7E22C1B7FE900847016 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		02C2C7E92C1B7FEA00847016 /* Debug */ = {
@@ -572,82 +422,6 @@
 			};
 			name = Release;
 		};
-		02C2C7EF2C1B7FEA00847016 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z6L4HT99JB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.DessertsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desserts.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Desserts";
-			};
-			name = Debug;
-		};
-		02C2C7F02C1B7FEA00847016 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z6L4HT99JB;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.DessertsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desserts.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Desserts";
-			};
-			name = Release;
-		};
-		02C2C7F22C1B7FEA00847016 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z6L4HT99JB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.DessertsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Desserts;
-			};
-			name = Debug;
-		};
-		02C2C7F32C1B7FEA00847016 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z6L4HT99JB;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.DessertsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Desserts;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -665,24 +439,6 @@
 			buildConfigurations = (
 				02C2C7EC2C1B7FEA00847016 /* Debug */,
 				02C2C7ED2C1B7FEA00847016 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		02C2C7EE2C1B7FEA00847016 /* Build configuration list for PBXNativeTarget "DessertsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02C2C7EF2C1B7FEA00847016 /* Debug */,
-				02C2C7F02C1B7FEA00847016 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		02C2C7F12C1B7FEA00847016 /* Build configuration list for PBXNativeTarget "DessertsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02C2C7F22C1B7FEA00847016 /* Debug */,
-				02C2C7F32C1B7FEA00847016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An enumeration defining HTTP methods for an endpoint.
 enum RequestType: String {
     case get = "GET"
 }

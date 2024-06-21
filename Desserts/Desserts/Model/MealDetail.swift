@@ -15,10 +15,15 @@ struct MealDetailResponseWrapper: Decodable {
 
 // MARK: Type Definition
 
+/// A type that contains the details of a meal.
 struct MealDetail: Identifiable {
+    /// The unique meal ID.
     let id: String
+    /// The meal category.
     let category: String
+    /// The meal instructions.
     let instructions: String
+    /// An array of ingredients and their measurements for the meal.
     var ingredients: Array<Ingredient>?
 }
 

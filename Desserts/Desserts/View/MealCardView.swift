@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays a meal's name and thumbnail image.
 struct MealCardView: View {
     let meal: Meal
     

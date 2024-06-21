@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A header view to display high-level details of a meal.
 struct MealHeaderView: View {
     let meal: Meal
     

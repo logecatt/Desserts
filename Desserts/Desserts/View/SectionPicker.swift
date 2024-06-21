@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// A custom control for selecting from a set of mutually exclusive values.
 struct SectionPicker<SelectionValue, Content>: View
 where SelectionValue: Hashable,
       Content: View

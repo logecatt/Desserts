@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays a list of meals in a given category.
 struct MealsView: View {
     let category: String = "Dessert"
     @Binding var meals: [Meal]

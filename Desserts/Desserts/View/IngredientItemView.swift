@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view that displays an ingredient and its associate measurement.
 struct IngredientItemView: View {
     let ingredient: Ingredient
     

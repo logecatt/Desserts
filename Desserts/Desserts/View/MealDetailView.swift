@@ -33,7 +33,6 @@ struct MealDetailView: View {
             
             switch selectedSection {
             case .ingredients:
-//                mealIngredientsView
                 SectionView(title: LocalizedStringKey(selectedSection.rawValue)) {
                     ForEach(meal.details?.ingredients ?? []) { ingredient in
                         IngredientItemView(ingredient: ingredient)
@@ -41,7 +40,6 @@ struct MealDetailView: View {
                 }
                     .listRowSeparator(.hidden)
             case .instructions:
-//                mealInstructionsView
                 SectionView(title: LocalizedStringKey(selectedSection.rawValue)) {
                     Text(meal.details?.instructions ?? "")
                 }

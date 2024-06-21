@@ -27,7 +27,3 @@ where Content: View
         }
     }
 }
-
-//#Preview {
-//    SectionView()
-//}

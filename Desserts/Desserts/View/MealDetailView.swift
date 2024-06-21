@@ -26,20 +26,25 @@ struct MealDetailView: View {
                 .listRowSeparator(.hidden)
             
             
-            Picker("", selection: $selectedSection) {
-                ForEach(Section.allCases) { section in
+            SectionPicker(selection: $selectedSection, items: .constant(Section.allCases)) { section in
                     Text(section.rawValue)
-                }
             }
-            .pickerStyle(.segmented)
             .listRowSeparator(.hidden)
             
             switch selectedSection {
             case .ingredients:
-                mealIngredientsView
+//                mealIngredientsView
+                SectionView(title: LocalizedStringKey(selectedSection.rawValue)) {
+                    ForEach(meal.details?.ingredients ?? []) { ingredient in
+                        IngredientItemView(ingredient: ingredient)
+                    }
+                }
                     .listRowSeparator(.hidden)
             case .instructions:
-                mealInstructionsView
+//                mealInstructionsView
+                SectionView(title: LocalizedStringKey(selectedSection.rawValue)) {
+                    Text(meal.details?.instructions ?? "")
+                }
                     .listRowSeparator(.hidden)
             }
         }
@@ -51,7 +56,7 @@ struct MealDetailView: View {
                 isLoading = true
                 Task {
                     do {
-                        meal.details = try await MenuClient().getMealDetails(id: meal.id)
+                        meal.details = try await MealClient().getMealDetails(id: meal.id)
                         isLoading = false
                     } catch {
                         meal.details = nil

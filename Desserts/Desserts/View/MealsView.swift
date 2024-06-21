@@ -11,17 +11,22 @@ struct MealsView: View {
     @Binding var meals: [Meal]
     @State private var searchText: String = ""
     
+    private struct Constants {
+        static let columnMinimumWidth = 170.0
+        static let columnSpacing = 16.0
+    }
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVGrid(
-                    columns: [GridItem(.adaptive(minimum: 170))],
+                    columns: [GridItem(.adaptive(minimum: Constants.columnMinimumWidth))],
                     alignment: .center,
-                    spacing: 16
+                    spacing: Constants.columnSpacing
                 ) {
                     ForEach($filteredMeals) { $meal in
                         NavigationLink(destination: MealDetailView(meal: $meal)) {
-                            MealCard(meal: meal)
+                            MealCardView(meal: meal)
                         }
                         .buttonStyle(.plain)
                     }
@@ -30,11 +35,11 @@ struct MealsView: View {
             .scrollIndicators(.never)
             .navigationTitle("Dessert")
         }
-        .searchable(text: $searchText, prompt: "Search for a meal by name")
+        .searchable(text: $searchText, prompt: "Filter meals by name")
         .onAppear {
             Task {
                 do {
-                    meals = try await MenuClient().getMealsForCategory() ?? []
+                    meals = try await MealClient().getMealsForCategory() ?? []
                     updateFilteredMeals(searchText)
                 } catch {
                     meals = []
@@ -52,7 +57,7 @@ struct MealsView: View {
         if searchText.isEmpty {
             filteredMeals = meals
         } else {
-            filteredMeals = meals.filter { $0.name.contains(searchText) }
+            filteredMeals = meals.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
     }
 }

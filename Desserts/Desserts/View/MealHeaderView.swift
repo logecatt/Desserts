@@ -24,6 +24,12 @@ struct MealHeaderView: View {
             Text(meal.name.localizedCapitalized)
                 .font(.largeTitle)
                 .bold()
+            
+            if let category = meal.details?.category {
+                Text(category)
+                    .font(.callout)
+                    .italic()
+            }
         }
     }
 }

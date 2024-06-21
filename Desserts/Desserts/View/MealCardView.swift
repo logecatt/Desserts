@@ -1,5 +1,5 @@
 //
-//  MealCard.swift
+//  MealCardView.swift
 //  Desserts
 //
 //  Created by Logan Parmeter on 6/19/24.
@@ -7,11 +7,17 @@
 
 import SwiftUI
 
-struct MealCard: View {
+struct MealCardView: View {
     let meal: Meal
     
+    private struct Constants {
+        static let spacing = 8.0
+        static let imageSize = 170.0
+        static let cornerRadius = 8.0
+    }
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 8.0) {
+        VStack(alignment: .leading, spacing: Constants.spacing) {
             AsyncImage(
                 url: URL(string: meal.thumbnailURL ?? ""),
                 content: { image in
@@ -22,9 +28,9 @@ struct MealCard: View {
                 }
             )
             .aspectRatio(contentMode: ContentMode.fill)
-            .frame(width: 170, height: 170)
+            .frame(width: Constants.imageSize, height: Constants.imageSize)
             .background(Color.gray)
-            .clipShape(RoundedRectangle(cornerRadius: 8.0))
+            .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius))
             
             Text(meal.name.localizedCapitalized)
                 .font(.caption)
@@ -33,5 +39,5 @@ struct MealCard: View {
 }
 
 #Preview("", traits: .sizeThatFitsLayout) {
-    MealCard(meal: Meal.sampleData[0])
+    MealCardView(meal: Meal.sampleData[0])
 }
